@@ -1,0 +1,5 @@
+[flake8]
+max-line-length = 120
+ignore = S101, S104, WPS432, WPS110, WPS212, WPS226, WPS442, WPS520, D103, D100, WPS300, D104, F401, WPS412
+
+inline-quotes = double

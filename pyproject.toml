@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "aiohttp-hash-server"
+version = "0.1.0"
+description = ""
+authors = ["Vladislav"]
+readme = "README.md"
+packages = [
+    { include = "app" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiohttp = "^3.9.5"
+click = "^8.1.7"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+black = "^24.4.2"
+isort = "^5.13.2"
+mypy = "^1.10.0"
+pytest-aiohttp = "^1.0.5"
+wemake-python-styleguide = "^0.19.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+aiohttp-hash-server = "app:run_server"
+
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
